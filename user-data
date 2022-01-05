@@ -1,0 +1,26 @@
+#cloud-config
+autoinstall:
+  version: 1
+  locale: ja_JP.UTF-8
+  keyboard:
+    layout: "jp"
+  network:
+    version: 2
+    ethernets:
+      ens160:
+        dhcp4: yes
+  storage:
+    layout:
+      name: direct
+  identity:
+    hostname: cdsl-ubuntu
+    password: "xxx"
+    username: cdsl
+  ssh:
+    install-server: yes
+  packages:
+   - curl
+   - htop
+  user-data:
+    timezone: Asia/Tokyo
+
