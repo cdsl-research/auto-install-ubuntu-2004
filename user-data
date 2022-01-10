@@ -21,6 +21,8 @@ autoinstall:
   packages:
    - curl
    - htop
+  late-commands:
+   - sed -ie 's/%sudo\s\+ALL=(ALL:ALL) /&NOPASSWD:/' /target/etc/sudoers
   user-data:
     timezone: Asia/Tokyo
 
